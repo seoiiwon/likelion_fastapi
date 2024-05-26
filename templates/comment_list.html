@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', path='css/comment_list.css') }}">
+    <title>FastAPI Board</title>
+</head>
+<body>
+
+    <!-- title -->
+    <h1>FastAPI 게시판</h1>
+
+    <!-- Comment bar -->
+    <form class="comment" action="/api/comment/list/{{ post_id }}" method="post">
+        <input type="text" name="content" class="commentBox" placeholder="댓글을 입력하세요." required>
+        <button type="submit" class="commentBtn">GO</button>
+    </form>
+
+
+    <!-- list box -->
+    <div class="listBox">
+        <ul class="subjectList">
+            {% for comment in comment_list_all %}
+            <li class="subjects">
+                <span>{{ comment.content }}</span>
+                <span>{{ comment.date.strftime('(%Y.%m.%d %H:%M)') }}</span>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <!-- back btn -->
+    <div class="back">
+        <a class="backA" href="/api/post/detail/{{ post_id }}">돌아가기</a>
+    </div>
+    
+</body>
+</html>

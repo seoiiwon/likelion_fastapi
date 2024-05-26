@@ -1,0 +1,107 @@
+@font-face {
+  font-weight: 400;
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+}
+
+body {
+  background-color: white;
+  font-family: "Pretendard-Regular";
+}
+
+h1 {
+  color: #4585fb;
+  text-align: center;
+  padding: 3vh;
+  font-size: 3rem;
+}
+input {
+  border: none;
+}
+input:hover {
+  cursor: text;
+}
+input:focus {
+  outline: none;
+}
+
+.box {
+  background-color: white;
+  border-radius: 80px;
+  height: 70vh;
+  width: 65vw;
+  margin: 3vh auto;
+  overflow: scroll;
+  position: relative;
+  border: 2px solid #4585fb;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+h2 {
+  text-align: center;
+  margin: 4vh 0;
+  font-size: 1.7rem;
+}
+
+p {
+  font-size: 1.2rem;
+}
+.date {
+  text-align: right;
+  margin-right: 4vw;
+}
+.contentBox {
+  margin: 2vh 4vw;
+}
+.content {
+  word-wrap: break-word;
+}
+
+.linkBox {
+  position: relative;
+  text-align: center;
+  position: absolute;
+  bottom: 3vh;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.sepLine {
+  color: gray;
+}
+
+a {
+  text-decoration: none;
+  color: gray;
+  font-size: 1.2rem;
+}
+
+button {
+  border: none;
+  background-color: white;
+  color: gray;
+  font-size: 1.1rem;
+}
+button:hover {
+  cursor: pointer;
+}
+
+.goToList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 8vh;
+  height: 5vh;
+  background-color: #4585fb;
+  margin: auto;
+  border-radius: 20px;
+}
+
+.list {
+  color: white;
+  font-size: 1.05rem;
+  text-decoration: none;
+}

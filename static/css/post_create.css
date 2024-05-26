@@ -1,0 +1,78 @@
+@font-face {
+  font-weight: 400;
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+}
+
+body {
+  background-color: white;
+  font-family: "Pretendard-Regular";
+}
+
+h1 {
+  color: #4585FB;
+  text-align: center;
+  padding: 3vh;
+  font-size: 3rem;
+}
+
+.box {
+  background-color: white;
+  border-radius: 80px;
+  height: 75vh;
+  width: 65vw;
+  margin: 3vh auto;
+  overflow: scroll;
+  position: relative;
+  border: 2px solid #4585FB;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+input, textarea{
+    border: none;
+    resize: none;
+}
+input, textarea:hover{
+    cursor: text;
+}
+input, textarea:focus{
+    outline: none;
+}
+
+
+#subject{
+    border-bottom: 1.5px solid black;
+    display: block;
+    font-size: 1.3rem;
+    margin: 3vh auto;
+    text-align: center;
+    width: 40vw;
+}
+
+#content{
+    border: 1px solid gainsboro;
+    margin: auto;
+    display: block;
+    width: 45vw;
+    height: 55vh;
+    font-size: 1.2rem;
+}
+
+#submit{
+    display: block;
+    margin: 2vh auto;
+    background-color: #4585FB;
+    color: white;
+    border: none;
+    width: 8vh;
+    height: 5vh;
+    border-radius: 20px;
+    font-size: 1.05rem;
+}
+#submit:hover{
+    cursor: pointer;
+}
+

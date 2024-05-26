@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{ url_for('static', path='css/post_create.css') }}"/>
+    <script src="{{ url_for('static', path='js/post_update.js') }}" defer data_post_id="{{ post.id }}"></script>
+    <title>Document</title>
+  </head>
+  <body>
+
+    <!-- title -->
+    <h1>FastAPI 게시판</h1>
+
+    <!-- update box -->
+    <div class="box">
+      <form id="postForm">
+        <input type="text" id="subject" placeholder="제목을 입력하세요." value="{{ post.subject }}" required/>
+        <textarea id="content" placeholder="내용을 입력하세요." required>{{ post.content }}</textarea>
+        <button type="submit" id="submit">제출</button>
+      </form>
+    </div>
+    
+  </body>
+</html>

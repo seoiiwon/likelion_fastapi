@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', path='css/post_detail.css') }}"
+    />
+    <script
+      src="{{ url_for('static', path='js/post_detail.js') }}"
+      defer
+      data_post_id="{{ post.id }}"
+    ></script>
+    <title>Document</title>
+  </head>
+  <body>
+
+    <!-- title -->
+    <h1>FastAPI 게시판</h1>
+
+    <!-- subject & content box -->
+    <div class="box">
+      <h2>{{ post.subject }}</h2>
+      <p class="date">{{ post.date.strftime('%Y-%m-%d %H:%M') }}</p>
+      <div class="contentBox">
+        <p class="content">{{ post.content }}</p>
+      </div>
+      <!-- create / delete btn -->
+      <div class="linkBox">     
+        <button id="update">수정</button>
+        <span class="sepLine">&nbsp; | &nbsp;</span>
+        <button id="delete">삭제</button>
+        <span class="sepLine">&nbsp; | &nbsp;</span>
+        <button id="comment">댓글</button>
+      </div>
+    </div>
+
+    <!-- list btn -->
+    <div class="goToList">
+      <a class="list" href="/api/post/list">목록</a>
+    </div>
+
+  </body>
+</html>
