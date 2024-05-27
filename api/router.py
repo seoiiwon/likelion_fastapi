@@ -76,17 +76,12 @@ def post_delete(post_id : int, db : Session=Depends(get_db)):
 
 
 # 05. Comment List
-# @router.get("/comment/list/{post_id}", response_class=HTMLResponse)
-# async def comment_list_html(request : Request, post_id : int, db : Session=Depends(get_db)):
-#     comment_list_all = crud.get_comment_list(db, post_id=post_id)
-#     return templates.TemplateResponse(name="comment_list.html", context={"request" : request, "comment_list_all" : comment_list_all})
-
 @router.get("/comment/list/{post_id}", response_class=HTMLResponse)
 async def comment_list_html(request: Request, post_id: int, db: Session = Depends(get_db)):
     comment_list_all = crud.get_comment_list(db, post_id=post_id)
     return templates.TemplateResponse(name="comment_list.html", context={"request": request, "comment_list_all": comment_list_all, "post_id": post_id})
 
-
+# 06. Comment Create
 @router.post("/comment/list/{post_id}", status_code=status.HTTP_204_NO_CONTENT)
 async def comment_create(post_id: int, content: str = Form(...), db: Session = Depends(get_db)):
     comment_data = schema.CreateCommentSchema(content=content)

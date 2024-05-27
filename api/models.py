@@ -1,6 +1,6 @@
 from sqlalchemy import *
 from config.database import Base
-from sqlalchemy.orm import relationship
+
 
 class Post(Base):
     __tablename__ = "post"
@@ -9,6 +9,8 @@ class Post(Base):
     subject = Column(String, nullable=False)
     content = Column(Text, nullable=False)
     date = Column(DateTime, nullable=False)
+
+from sqlalchemy.orm import relationship
 
 class Comment(Base):
     __tablename__ = "comment"
